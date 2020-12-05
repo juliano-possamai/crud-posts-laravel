@@ -6,9 +6,6 @@
 	<div class="row mt-3">
 		<div class="col-12">
 			<h1>Postagens</h1>
-			@if($post->id)
-				<a href="{{ route('posts.index', ['question_id' => $post->id])}}" class="btn btn-success">Gerenciar Opções</a>
-			@endif
 		</div>
 	</div>
 </div>
@@ -25,6 +22,14 @@
 			@endif
 
 				{{ csrf_field() }}
+				@if($post->id)
+					<div class="form-row">
+						<div class="form-group col-md-2">
+							<label for="dataCriacao">Criado em: </label>
+							<input type="text" name="dataCriacao" id="dataCriacao" class="form-control" value="{{ date( 'd/m/Y' , strtotime($post->post_date)) }}" disabled>
+						</div>
+					</div>
+				@endif
 				<div class="form-row">
 					<div class="form-group col-md-3">
                         <label for="category_id">Categoria</label>
@@ -43,13 +48,13 @@
 				<div class="form-row">
 					<div class="form-group col-md-12">
                         <label for="title">Título</label>
-                        <input type="text" name="title" id="title" class="form-control" placeholder="Digite o título da postagem" value="{{ $post->title }}"></input>
+                        <input type="text" name="title" id="title" class="form-control" placeholder="Digite o título da postagem" value="{{ $post->title }}">
                     </div>
 				</div>
 				<div class="form-row">
 					<div class="form-group col-md-12">
                         <label for="summary">Resumo</label>
-                        <input type="text" name="summary" id="summary" class="form-control" placeholder="Digite um breve resumo sobre a publicação" value="{{ $post->summary }}"></input>
+                        <input type="text" name="summary" id="summary" class="form-control" placeholder="Digite um breve resumo sobre a publicação" value="{{ $post->summary }}">
                     </div>
 				</div>
 				<div class="form-row">

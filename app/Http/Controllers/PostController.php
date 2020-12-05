@@ -44,8 +44,8 @@ class PostController extends Controller {
             'title.min' => 'O campo título deve ter pelo menos 3 caracteres ',
             'summary.required' => 'O campo resumo deve ser preenchido',
             'summary.min' => 'O campo resumo deve ter pelo menos 3 caracteres ',
-            'text.required' => 'O campo texto deve ser preenchido',
-            'text.min' => 'O campo texto deve ter pelo menos 3 caracteres ',
+            'text.required' => 'O campo conteúdo deve ser preenchido',
+            'text.min' => 'O campo conteúdo deve ter pelo menos 3 caracteres ',
             'category_id.exists' => 'Você deve selecionar uma categoria válida'
         ];
 
@@ -92,8 +92,8 @@ class PostController extends Controller {
             'title.min' => 'O campo título deve ter pelo menos 3 caracteres ',
             'summary.required' => 'O campo resumo deve ser preenchido',
             'summary.min' => 'O campo resumo deve ter pelo menos 3 caracteres ',
-            'text.required' => 'O campo texto deve ser preenchido',
-            'text.min' => 'O campo texto deve ter pelo menos 3 caracteres ',
+            'text.required' => 'O campo conteúdo deve ser preenchido',
+            'text.min' => 'O campo conteúdo deve ter pelo menos 3 caracteres ',
             'category_id.exists' => 'Você deve selecionar uma categoria válida'
         ];
 
